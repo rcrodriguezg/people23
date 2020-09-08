@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -42,6 +43,19 @@ public class StudentsController {
 		}
 		
 	}
+	
+	@DeleteMapping(path = "/students", produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Students> studentsDelete(@RequestParam(name = "rut", required = false ) String rut ) {
+		
+		try {
+			studentsBO.deleteByCode(rut);
+			return new ResponseEntity(HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR );
+		}
+		
+	}
+	
 
 	/**
 	 * 

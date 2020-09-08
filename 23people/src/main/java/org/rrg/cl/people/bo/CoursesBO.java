@@ -39,6 +39,13 @@ public class CoursesBO {
 		return courses; 
 	}
 	
+	public void deleteByCode(String code)  {
+		Courses courses = new Courses();
+		repository.deleteById(code);
+		
+	}
+	
+	
 	/**
 	 * 
 	 * @param name

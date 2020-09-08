@@ -24,6 +24,7 @@ public class Students implements Serializable {
 	@Column
 	private String lastName;
 	
+	
 	@Column
 	private int age;
 	
@@ -43,12 +44,7 @@ public class Students implements Serializable {
 	public void setRut(String rut) {
 		this.rut = rut;
 	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+	
 	public int getAge() {
 		return age;
 	}
@@ -60,6 +56,12 @@ public class Students implements Serializable {
 	}
 	public void setCourse(String course) {
 		this.course = course;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	
 	

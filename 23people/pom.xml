@@ -6,7 +6,7 @@
 	<groupId>org.rrg.cl</groupId>
 	<artifactId>23people</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>23people</name>
 	<description>Api Prueba 23 People</description>
 
